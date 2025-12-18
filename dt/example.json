@@ -1,0 +1,24 @@
+{
+  "type": "post",
+  "url": "{server}/panelresults/{company}",
+  "body": {
+    "token": "{token}",
+    "id": "ABC123",
+    "panel": "ALC",
+    "result": "POS",
+    "tested": "2024-01-01T01:01:01",
+    "tested-by": "First Last",
+    "tests": [
+      {
+        "code": "ALC-1",
+        "result": "POS",
+        "quantity": "15.00",
+        "units": "ng/mL"
+      }
+    ]
+  },
+  "response": {
+    "status": "Success",
+    "info": ""
+  }
+}

@@ -1,0 +1,31 @@
+Sample Results – Send
+1.1.   POST  {server}/panelresults/{company}
+
+1.2.   Body
+
+1.2.1.                  {"token":"{token}", "id": "ABC123", "panel": "ALC", "result":"POS", "tested": "2024-01-01T01:01:01”, "tested-by": ”First Last”, "tests": [ {"code": "ALC-1", "result":"POS", "quantity": "15.00”, "units":”ng/mL”},…] }
+
+1.2.2.                  Panel:  Code for panel (see API code tables).  Must match pre-defined panel.  Only one panel of results can be submitted at a time.
+
+1.2.3.                  Result: Panel result code (see API code tables)
+
+1.2.4.                  Tested: Tested date/time (use “Z” for UTC, or local plus offset “-07:00”)
+
+1.2.5.                  Tests:   Optional.  Individual test codes and results
+
+1.2.5.1.            Code:                   Test code (see API code tables)
+
+1.2.5.2.            Result: Result code  (see API code tables)
+
+1.2.5.3.            Quantity:            Formatted string preserving significant digits
+
+1.2.5.4.            Units:                   Typically “ng/mL”
+
+1.3.   Response
+
+1.3.1.                  {"status":"Success", "info":"" }
+
+1.3.2.                  Status: Success, Expired, NotAuth, Error, Duplicate
+
+1.3.3.                  Info:                      Details on status
+
