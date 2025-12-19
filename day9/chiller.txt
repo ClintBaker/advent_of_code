@@ -1,0 +1,65 @@
+..............
+.......#XXX#..
+.......X...X..
+..#XXXX#...X..
+..X........X..
+..#XXXXXX#.X..
+.........X.X..
+.........#X#..
+..............
+
+# every red tile is connected to the red tile befare and after it by a straight line of green tiles.
+
+..............
+.......#XXX#..
+.......XXXXX..
+..#XXXX#XXXX..
+..XXXXXXXXXX..
+..#XXXXXX#XX..
+.........XXX..
+.........#X#..
+..............
+
+# we need to create a rectangle and get the area, but the rectangle must fall within the perimeter
+
+# DEFINE PERIMETER
+- connect (wrap if needed) in order
+- fill in the perimeter
+
+7,1
+11,1
+11,7
+9,7
+9,5
+2,5
+2,3
+7,3
+
+# horizontal connection
+- always push both x values to row
+
+# vertical connection
+# push x value to every row in between
+
+..............
+.......#XXX#..
+.......X......
+..#....#......
+..............
+..#......#....
+..............
+.........#.#..
+..............
+
+
+
+
+
+
+[7,11]
+[7,11]
+[2,11]
+[2,11]
+[2,11]
+[9,11]
+[9,11]
